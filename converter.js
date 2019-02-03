@@ -7,7 +7,7 @@ export const convert = url => {
           name = _name;
           descriptor = _descriptor;
           ext = _ext;
-          id = _name.replace(' ', '')
+          id = _name.replace(/ /g, '');
         }
       }
       eval(data); // Run the extension code
