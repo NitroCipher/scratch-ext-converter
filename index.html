@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Extension Converter</title>
+  </head>
+  <body>
+    <input id="ext-url" type="url" /> <button>Convert Extension</button>
+    <div id="output"></div>
+  </body>
+  <script type="module">
+    import { convert } from './converter.js';
+    document.querySelector('button').addEventListener('click', async () => {
+      const extUrl = document.querySelector('#ext-url').value;
+      const result = await convert(extUrl);
+      document.querySelector('#output').textContent = result;
+    });
+  </script>
+</html>
