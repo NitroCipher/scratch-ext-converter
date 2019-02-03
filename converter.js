@@ -40,7 +40,7 @@ function getBlockType (oldType) {
     case 'w': return 'command';
     case 'r': return 'reporter';
     case 'R': return 'reporter';
-    case 'b': return 'boolean';
+    case 'b': return 'Boolean';
     case 'h': return 'hat';
   }
 }
