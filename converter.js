@@ -1,3 +1,7 @@
+/**
+ * Converts a Scratch 2 Extension into a Scratch 3 Extension.
+ * @param {string} url URL of the Extension to Convert.
+ */
 export const convert = url => {
   return new Promise((resolve, reject) => {
     fetch(url).then(response => response.text()).then(data => { // Fetch the URL and get the text content
@@ -34,6 +38,10 @@ export const convert = url => {
   });
 }
 
+/**
+ * Converts the old block type Character to the new blockType strings.
+ * @param {string} oldType A Character representing the Scratch 2 Block's Type.
+ */
 function getBlockType (oldType) {
   switch (oldType) {
     case ' ': return 'command';
